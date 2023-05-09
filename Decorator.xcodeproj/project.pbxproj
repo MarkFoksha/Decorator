@@ -13,6 +13,11 @@
 		1372E5992A0995E700735513 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1372E5972A0995E700735513 /* Main.storyboard */; };
 		1372E59B2A0995EA00735513 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1372E59A2A0995EA00735513 /* Assets.xcassets */; };
 		1372E59E2A0995EA00735513 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1372E59C2A0995EA00735513 /* LaunchScreen.storyboard */; };
+		1372E5A62A0998D600735513 /* CarProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372E5A52A0998D600735513 /* CarProtocol.swift */; };
+		1372E5A82A09994800735513 /* TeslaModel3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372E5A72A09994800735513 /* TeslaModel3.swift */; };
+		1372E5AB2A099F5A00735513 /* TeslaDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372E5AA2A099F5A00735513 /* TeslaDecorator.swift */; };
+		1372E5AE2A0A38EC00735513 /* TeslaLongRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372E5AD2A0A38EC00735513 /* TeslaLongRange.swift */; };
+		1372E5B02A0A3A2000735513 /* TeslaPerformance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1372E5AF2A0A3A2000735513 /* TeslaPerformance.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		1372E59A2A0995EA00735513 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1372E59D2A0995EA00735513 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1372E59F2A0995EA00735513 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1372E5A52A0998D600735513 /* CarProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarProtocol.swift; sourceTree = "<group>"; };
+		1372E5A72A09994800735513 /* TeslaModel3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaModel3.swift; sourceTree = "<group>"; };
+		1372E5AA2A099F5A00735513 /* TeslaDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaDecorator.swift; sourceTree = "<group>"; };
+		1372E5AD2A0A38EC00735513 /* TeslaLongRange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaLongRange.swift; sourceTree = "<group>"; };
+		1372E5AF2A0A3A2000735513 /* TeslaPerformance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeslaPerformance.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,12 +69,33 @@
 				1372E5912A0995E700735513 /* AppDelegate.swift */,
 				1372E5932A0995E700735513 /* SceneDelegate.swift */,
 				1372E5952A0995E700735513 /* ViewController.swift */,
+				1372E5AC2A099F7C00735513 /* Decorators */,
+				1372E5A92A099F4000735513 /* Car */,
 				1372E5972A0995E700735513 /* Main.storyboard */,
 				1372E59A2A0995EA00735513 /* Assets.xcassets */,
 				1372E59C2A0995EA00735513 /* LaunchScreen.storyboard */,
 				1372E59F2A0995EA00735513 /* Info.plist */,
 			);
 			path = Decorator;
+			sourceTree = "<group>";
+		};
+		1372E5A92A099F4000735513 /* Car */ = {
+			isa = PBXGroup;
+			children = (
+				1372E5A72A09994800735513 /* TeslaModel3.swift */,
+				1372E5A52A0998D600735513 /* CarProtocol.swift */,
+			);
+			path = Car;
+			sourceTree = "<group>";
+		};
+		1372E5AC2A099F7C00735513 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				1372E5AA2A099F5A00735513 /* TeslaDecorator.swift */,
+				1372E5AD2A0A38EC00735513 /* TeslaLongRange.swift */,
+				1372E5AF2A0A3A2000735513 /* TeslaPerformance.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +170,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1372E5962A0995E700735513 /* ViewController.swift in Sources */,
+				1372E5AB2A099F5A00735513 /* TeslaDecorator.swift in Sources */,
+				1372E5A62A0998D600735513 /* CarProtocol.swift in Sources */,
+				1372E5AE2A0A38EC00735513 /* TeslaLongRange.swift in Sources */,
+				1372E5B02A0A3A2000735513 /* TeslaPerformance.swift in Sources */,
 				1372E5922A0995E700735513 /* AppDelegate.swift in Sources */,
 				1372E5942A0995E700735513 /* SceneDelegate.swift in Sources */,
+				1372E5A82A09994800735513 /* TeslaModel3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

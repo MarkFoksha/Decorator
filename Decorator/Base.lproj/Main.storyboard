@@ -1,24 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Decorator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tesla model 3" translatesAutoresizingMaskIntoConstraints="NO" id="63p-Db-oZ1">
+                                <rect key="frame" x="0.0" y="148.5" width="375" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="xJb-Q4-64n"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRx-af-nPc">
+                                <rect key="frame" x="150" y="89" width="61" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9gW-rv-Qea"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="0$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxE-8f-s4D">
+                                <rect key="frame" x="219" y="89" width="146" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Car type" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yv-fb-GcP">
+                                <rect key="frame" x="150" y="127" width="215" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="yLI-Wq-xhp">
+                                <rect key="frame" x="38" y="410.5" width="299" height="32"/>
+                                <segments>
+                                    <segment title="Standart"/>
+                                    <segment title="Long"/>
+                                    <segment title="Performance"/>
+                                </segments>
+                                <connections>
+                                    <action selector="typeControl:" destination="BYZ-38-t0r" eventType="valueChanged" id="OYF-0K-606"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="63p-Db-oZ1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="2Ec-gl-mXC"/>
+                            <constraint firstItem="LxE-8f-s4D" firstAttribute="leading" secondItem="QRx-af-nPc" secondAttribute="trailing" constant="8" id="6X6-cu-fJw"/>
+                            <constraint firstItem="1Yv-fb-GcP" firstAttribute="leading" secondItem="QRx-af-nPc" secondAttribute="leading" id="9LH-5t-qgu"/>
+                            <constraint firstItem="QRx-af-nPc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="Bkw-hH-2Tp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1Yv-fb-GcP" secondAttribute="trailing" constant="10" id="GZN-YC-hcB"/>
+                            <constraint firstItem="LxE-8f-s4D" firstAttribute="centerY" secondItem="QRx-af-nPc" secondAttribute="centerY" id="PVK-hF-5X7"/>
+                            <constraint firstItem="63p-Db-oZ1" firstAttribute="top" secondItem="1Yv-fb-GcP" secondAttribute="bottom" constant="1" id="SdQ-kr-iLX"/>
+                            <constraint firstItem="yLI-Wq-xhp" firstAttribute="top" secondItem="63p-Db-oZ1" secondAttribute="bottom" constant="12" id="XKu-SB-uzb"/>
+                            <constraint firstItem="QRx-af-nPc" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="89" id="cqF-aI-jTb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="63p-Db-oZ1" secondAttribute="trailing" id="jPe-vu-wgA"/>
+                            <constraint firstItem="yLI-Wq-xhp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kpu-xI-Zch"/>
+                            <constraint firstItem="1Yv-fb-GcP" firstAttribute="top" secondItem="QRx-af-nPc" secondAttribute="bottom" constant="8" symbolic="YES" id="pNJ-KE-JYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LxE-8f-s4D" secondAttribute="trailing" constant="10" id="wEo-nC-2dJ"/>
+                            <constraint firstItem="63p-Db-oZ1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yUr-VE-Jne"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="carTypeLabel" destination="1Yv-fb-GcP" id="WGy-eX-VSd"/>
+                        <outlet property="priceLabel" destination="LxE-8f-s4D" id="UUW-bi-rPh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-12" y="3.1484257871064472"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Tesla model 3" width="1440" height="874"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
